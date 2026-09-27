@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Ritesh Prajapati - Web Developer and Full-Stack Developer Portfolio">
+<title>Ritesh Prajapati — 3D Developer Portfolio</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
+:root{--bg:#03050c;--card:#080c18d9;--line:#27304a;--text:#f7f7ff;--muted:#a8aec0;--purple:#a238ff;--blue:#42a9ff;--cyan:#45e8ff;--pink:#ff4bea}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{background:radial-gradient(circle at 50% 8%,#151044 0,#050711 32%,#02040a 100%);color:var(--text);font-family:Inter,sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:55px 55px;mask-image:linear-gradient(to bottom,#000,transparent 70%);z-index:-2}
+a{text-decoration:none;color:inherit}.wrap{width:min(94%,1180px);margin:auto}section{padding:80px 0}
+.nav{position:fixed;top:0;left:0;right:0;height:74px;z-index:100;background:linear-gradient(180deg,rgba(2,4,12,.9),rgba(2,4,12,.42),transparent);backdrop-filter:blur(9px)}
+.navin{height:100%;display:flex;align-items:center;justify-content:space-between}.brand{font:700 20px "Space Grotesk";display:flex;align-items:center;gap:10px}.brandmark{color:#b96cff;font-size:28px}.links{display:flex;gap:30px;list-style:none;font-size:13px;color:#d4d7e4}.links a{position:relative}.links a:hover{color:#fff}.links a.active:after{content:"";position:absolute;left:0;right:0;bottom:-16px;height:2px;background:linear-gradient(90deg,var(--purple),var(--blue));box-shadow:0 0 14px var(--purple)}.talk{border:1px solid #8846db;padding:10px 18px;border-radius:12px;background:#0e0b20;color:#fff;font-size:12px}.menu{display:none;background:none;border:0;color:white;font-size:24px}
+
+.hero{min-height:680px;padding-top:120px;position:relative;overflow:hidden}.hero:before{content:"";position:absolute;width:720px;height:420px;right:-120px;top:80px;background:radial-gradient(ellipse,#3320a2aa,transparent 65%);filter:blur(35px);animation:glow 7s ease-in-out infinite alternate}.heroGrid{display:grid;grid-template-columns:45% 55%;align-items:center;min-height:540px}.hero h1{font:700 clamp(54px,7vw,90px)/.88 "Space Grotesk";letter-spacing:-5px;margin:20px 0}.hero h1 span{display:block;background:linear-gradient(100deg,#fff 10%,#9e2fff 58%,#6e8cff);-webkit-background-clip:text;color:transparent}.role{color:#a957ff;font-size:18px;font-weight:600}.intro{max-width:490px;color:#c1c5d3;font-size:13px;line-height:1.7}.hello{display:inline-block;border:1px solid #5b46a0;background:#130f29;border-radius:10px;padding:8px 14px;font-size:12px;box-shadow:0 0 24px #6d2dff22}.buttons{display:flex;gap:12px;margin-top:25px}.btn{padding:13px 21px;border-radius:11px;border:1px solid #30394f;font-size:12px;font-weight:700;transition:.3s}.primary{background:linear-gradient(100deg,#7b20ff,#46aaff);box-shadow:0 10px 28px #7127ff33}.secondary{background:#0c1120}.btn:hover{transform:translateY(-4px);box-shadow:0 0 28px #6d4dff33}
+.heroVisual{position:relative;height:550px;display:flex;align-items:center;justify-content:center;perspective:1000px}.heroImg{width:100%;max-width:640px;filter:drop-shadow(0 25px 35px #000) drop-shadow(0 0 25px #5928ff44);animation:float 5s ease-in-out infinite;transform-style:preserve-3d}.orb{position:absolute;border:2px solid #563cff88;border-radius:50%;filter:blur(.2px);animation:spin 12s linear infinite}.o1{width:190px;height:190px;right:5%;top:10%}.o2{width:100px;height:100px;left:5%;top:30%;border-color:#25cfff88;animation-duration:8s}.o3{width:60px;height:60px;right:13%;bottom:18%;border-color:#ff47f688}
+.social{position:absolute;left:0;top:210px;display:flex;flex-direction:column;gap:6px}.social a{width:38px;height:38px;border:1px solid #33405b;border-radius:10px;background:#070b16c9;display:grid;place-items:center;color:#e5e8f2;font-size:14px}.social a:hover{border-color:#8e55ff;color:#fff;box-shadow:0 0 20px #7d36ff33}
+.stats{position:relative;margin-top:-40px;background:#080b19dd;border:1px solid #313a59;border-radius:18px;display:grid;grid-template-columns:repeat(4,1fr);padding:18px 25px;box-shadow:0 15px 55px #0009;backdrop-filter:blur(18px);z-index:3}.stat{text-align:center;border-right:1px solid #30364a}.stat:last-child{border:0}.stat b{display:block;font:700 25px "Space Grotesk";background:linear-gradient(90deg,#b95cff,#58d8ff);-webkit-background-clip:text;color:transparent}.stat small{font-size:10px;color:#b2b8c9}
+.head{margin-bottom:35px}.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:2px;color:#b65aff;margin-bottom:8px}.head h2{font:700 38px "Space Grotesk"}.head p{color:var(--muted);font-size:13px;margin-top:8px}
+.two{display:grid;grid-template-columns:1fr 1.15fr;gap:16px}.card{background:linear-gradient(145deg,#0a0e1bd9,#050811d9);border:1px solid #2b3550;border-radius:17px;padding:25px;box-shadow:inset 0 1px #ffffff0a,0 15px 40px #0005;transform-style:preserve-3d;transition:.25s}.card:hover{border-color:#7048c9;box-shadow:0 20px 55px #0008,0 0 30px #6b38ff14}.aboutText{color:#b9becd;font-size:13px;line-height:1.8}.aboutText+.aboutText{margin-top:12px}.aboutArt{display:flex;align-items:center;justify-content:center;min-height:270px;background:radial-gradient(circle at 50% 40%,#4d20b933,transparent 50%)}
+.skillGrid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}.skill{text-align:center}.skill .icon{font-size:31px;margin-bottom:9px;filter:drop-shadow(0 0 12px #8a43ff55)}.skill b{font-size:12px}.bar{height:4px;background:#20273a;border-radius:9px;margin-top:10px}.fill{height:100%;width:var(--w);background:linear-gradient(90deg,#9d31ff,#35d8ff);box-shadow:0 0 10px #754dff}
+.projects{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.project{overflow:hidden;padding:0}.project img{width:100%;height:160px;object-fit:cover;display:block;filter:saturate(1.08);transition:.5s}.project:hover img{transform:scale(1.08)}.pbody{padding:17px}.pbody h3{font:600 15px "Space Grotesk";margin-bottom:7px}.pbody p{font-size:11px;line-height:1.55;color:#a8afc0;min-height:52px}.tags{display:flex;flex-wrap:wrap;gap:5px;margin:12px 0}.tag{font-size:8px;padding:4px 7px;border:1px solid #35405a;border-radius:6px;color:#b9c4d9;background:#101626}.pactions{display:flex;justify-content:space-between;align-items:center}.pactions a{font-size:10px;color:#b65aff}
+
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;position:relative}.timeline:before{content:"";position:absolute;left:8%;right:8%;top:25px;height:2px;background:linear-gradient(90deg,#7943ff,#4be0ff);opacity:.55}.event{position:relative;padding-top:48px}.event .dot{position:absolute;top:17px;left:8px;width:16px;height:16px;border-radius:50%;background:#0a0d18;border:3px solid #7b4cff;box-shadow:0 0 16px #754aff}.event span{font-size:10px;color:#8de6ff}.event h3{font-size:13px;margin:7px 0}.event p{font-size:10px;color:#969fb4;line-height:1.6}
+.services{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}.service{text-align:center;padding:19px 12px}.service .si{font-size:28px;margin-bottom:9px}.service h3{font-size:11px}.service p{font-size:9px;color:#8e97aa;margin-top:7px;line-height:1.45}
+.resume{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:25px 30px;background:linear-gradient(100deg,#0b1020,#15112c);border:1px solid #313b59;border-radius:15px}.resume h2{font:600 20px "Space Grotesk"}.resume p{font-size:11px;color:#9da5b7;margin-top:5px}
+.contact{display:grid;grid-template-columns:.8fr 1.2fr;gap:14px}.contact p{color:#9da5b7;font-size:12px;line-height:1.7}.form{display:grid;gap:10px}.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}input,textarea{width:100%;background:#080d19;border:1px solid #29334b;border-radius:9px;padding:12px;color:white;font:11px Inter;outline:none}input:focus,textarea:focus{border-color:#8b43ff;box-shadow:0 0 0 3px #7b3dff15}textarea{min-height:115px;resize:vertical}
+footer{border-top:1px solid #1c2437;padding:22px 0;color:#737d93;font-size:10px;text-align:center}
+
+@keyframes float{50%{transform:translateY(-12px) rotateY(2deg)}}@keyframes spin{to{transform:rotate(360deg)}}@keyframes glow{to{transform:translate3d(-40px,20px,0) scale(1.1)}}
+.reveal{opacity:0;transform:translateY(28px);transition:.8s ease}.reveal.show{opacity:1;transform:none}
+@media(max-width:950px){.links{display:none}.menu{display:block}.talk{display:none}.heroGrid,.two,.contact{grid-template-columns:1fr}.heroVisual{height:430px}.social{top:170px}.skillGrid{grid-template-columns:repeat(3,1fr)}.projects{grid-template-columns:repeat(2,1fr)}.services{grid-template-columns:repeat(3,1fr)}.timeline{grid-template-columns:repeat(2,1fr)}.stats{margin-top:0}}
+@media(max-width:600px){section{padding:60px 0}.hero h1{font-size:58px}.heroVisual{height:340px}.heroImg{max-width:500px}.social{display:none}.stats{grid-template-columns:1fr 1fr}.stat{border-right:0;border-bottom:1px solid #30364a;padding:12px}.skillGrid,.projects,.services,.timeline{grid-template-columns:1fr}.row{grid-template-columns:1fr}.head h2{font-size:30px}}
+</style>
+</head>
+<body>
+<nav class="nav"><div class="wrap navin">
+  <a class="brand" href="#home"><span class="brandmark">RP</span> Ritesh Prajapati</a>
+  <ul class="links"><li><a class="active" href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li><li><a href="#projects">Projects</a></li><li><a href="#services">Services</a></li><li><a href="#resume">Resume</a></li><li><a href="#contact">Contact</a></li></ul>
+  <a class="talk" href="#contact">Let's Talk ♡</a><button class="menu" id="menu">☰</button>
+</div></nav>
+
+<section class="hero" id="home"><div class="wrap heroGrid">
+ <div>
+  <div class="hello">👋 Hello, I'm</div>
+  <h1>Ritesh<span>Prajapati</span></h1>
+  <div class="role">Web Developer | Full-Stack Developer</div>
+  <p class="intro" style="margin-top:13px">I build modern, responsive and user-friendly websites and web applications that deliver real value.</p>
+  <div class="buttons"><a class="btn primary" href="#projects">View My Work →</a><a class="btn secondary" href="#resume">Download Resume ↓</a></div>
+ </div>
+ <div class="heroVisual">
+  <div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div>
+  <img class="heroImg" src="hero-3d.jpg" alt="3D developer illustration">
+ </div>
+</div>
+<div class="wrap social"><a href="https://github.com/" target="_blank">●</a><a href="https://linkedin.com/" target="_blank">in</a><a href="mailto:your-email@example.com">✉</a><a href="#contact">◉</a></div>
+<div class="wrap stats"><div class="stat"><b>20+</b><small>Projects Completed</small></div><div class="stat"><b>10+</b><small>Technologies</small></div><div class="stat"><b>1+</b><small>Years of Practice</small></div><div class="stat"><b>5+</b><small>Certifications</small></div></div>
+</section>
+
+<section id="about"><div class="wrap"><div class="head"><div class="eyebrow">About Me</div><h2>Building ideas into <span style="color:#ad58ff">real experiences.</span></h2></div>
+<div class="two"><div class="card aboutArt"><img src="hero-3d.jpg" style="width:90%;max-height:300px;object-fit:cover;object-position:left center;border-radius:14px;opacity:.92" alt="Developer"></div><div class="card"><p class="aboutText">I'm a passionate Web Developer and Full-Stack Developer who loves turning ideas into real world web applications.</p><p class="aboutText">I focus on building responsive frontend, powerful backend and database-driven websites using modern technologies.</p><a class="btn secondary" href="#skills" style="display:inline-block;margin-top:12px">Know More About Me</a></div></div></div></section>
+
+<section id="skills"><div class="wrap"><div class="head"><div class="eyebrow">Skills</div><h2>My <span style="color:#ad58ff">technical toolkit.</span></h2></div>
+<div class="skillGrid">
+<div class="card skill"><div class="icon">▣</div><b>HTML5</b><div class="bar"><div class="fill" style="--w:95%"></div></div></div><div class="card skill"><div class="icon">◈</div><b>CSS3</b><div class="bar"><div class="fill" style="--w:90%"></div></div></div><div class="card skill"><div class="icon">JS</div><b>JavaScript</b><div class="bar"><div class="fill" style="--w:85%"></div></div></div><div class="card skill"><div class="icon">B</div><b>Bootstrap</b><div class="bar"><div class="fill" style="--w:90%"></div></div></div><div class="card skill"><div class="icon">🐍</div><b>Python</b><div class="bar"><div class="fill" style="--w:88%"></div></div></div><div class="card skill"><div class="icon">dj</div><b>Django</b><div class="bar"><div class="fill" style="--w:85%"></div></div></div><div class="card skill"><div class="icon">C</div><b>C Programming</b><div class="bar"><div class="fill" style="--w:80%"></div></div></div><div class="card skill"><div class="icon">SQL</div><b>MySQL</b><div class="bar"><div class="fill" style="--w:82%"></div></div></div><div class="card skill"><div class="icon">◉</div><b>Git & GitHub</b><div class="bar"><div class="fill" style="--w:80%"></div></div></div>
+</div></div></section>
+
+<section id="projects"><div class="wrap"><div class="head"><div class="eyebrow">Featured Projects</div><h2>Projects I'm <span style="color:#ad58ff">proud of.</span></h2></div>
+<div class="projects">
+<article class="card project"><img src="smart-build.jpg" alt="Smart Build Hub"><div class="pbody"><h3>Smart Build Hub</h3><p>Construction company website with services, project gallery and inquiry form.</p><div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span><span class="tag">PHP</span></div><div class="pactions"><a href="#contact">Live Demo</a><a href="#contact">◉</a></div></div></article>
+<article class="card project"><img src="book-store.jpg" alt="Online Book Store"><div class="pbody"><h3>Online Book Store</h3><p>E-commerce book store with cart, checkout, payment integration and admin panel.</p><div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span><span class="tag">PHP</span><span class="tag">MySQL</span></div><div class="pactions"><a href="#contact">Live Demo</a><a href="#contact">◉</a></div></div></article>
+<article class="card project"><img src="salon.jpg" alt="Premium Salon Management System"><div class="pbody"><h3>Premium Salon Management System</h3><p>Complete salon management system with booking, staff, services, customers and admin dashboard.</p><div class="tags"><span class="tag">Django</span><span class="tag">Python</span><span class="tag">MySQL</span><span class="tag">HTML</span></div><div class="pactions"><a href="#contact">Live Demo</a><a href="#contact">◉</a></div></div></article>
+<article class="card project"><img src="job-portal.jpg" alt="Online Job Portal"><div class="pbody"><h3>Online Job Portal</h3><p>Job listing portal with search, filters, applications, company panel and admin dashboard.</p><div class="tags"><span class="tag">Django</span><span class="tag">Python</span><span class="tag">MySQL</span><span class="tag">CSS</span></div><div class="pactions"><a href="#contact">Live Demo</a><a href="#contact">◉</a></div></div></article>
+</div></div></section>
+
+<section><div class="wrap"><div class="head"><div class="eyebrow">Experience & Education</div><h2>My <span style="color:#ad58ff">journey.</span></h2></div>
+<div class="timeline"><div class="event"><i class="dot"></i><span>2020</span><h3>High School</h3><p>Completed 10th Grade with good percentage.</p></div><div class="event"><i class="dot"></i><span>2022</span><h3>Intermediate</h3><p>Completed 12th Grade (PCM) with 70%.</p></div><div class="event"><i class="dot"></i><span>2023 — 2026</span><h3>Diploma</h3><p>Diploma in Information Technology.</p></div><div class="event"><i class="dot"></i><span>2023 — Present</span><h3>Web Development</h3><p>Building projects, learning new technologies and improving skills.</p></div></div></div></section>
+
+<section id="services"><div class="wrap"><div class="head"><div class="eyebrow">My Services</div><h2>What I can <span style="color:#ad58ff">build.</span></h2></div>
+<div class="services"><div class="card service"><div class="si">🌐</div><h3>Web Development</h3><p>Fast, secure and modern websites.</p></div><div class="card service"><div class="si">⌘</div><h3>Frontend Development</h3><p>Responsive UI with modern technologies.</p></div><div class="card service"><div class="si">▣</div><h3>Backend Development</h3><p>Powerful backend with Django & APIs.</p></div><div class="card service"><div class="si">dj</div><h3>Django Development</h3><p>Full-featured Django web applications.</p></div><div class="card service"><div class="si">◉</div><h3>Database Management</h3><p>Design, optimize and manage databases.</p></div><div class="card service"><div class="si">✎</div><h3>Website UI Design</h3><p>Creative and modern UI/UX designs.</p></div></div></div></section>
+
+<section id="resume"><div class="wrap"><div class="resume"><div><h2>Want to know more about my professional journey?</h2><p>Download my resume and check my skills, experience and projects in detail.</p></div><a class="btn primary" href="#" id="resumeBtn">Download Resume ↓</a></div></div></section>
+
+<section id="contact"><div class="wrap"><div class="head"><div class="eyebrow">Get In Touch</div><h2>Let's <span style="color:#ad58ff">connect.</span></h2></div>
+<div class="contact"><div class="card"><h3 style="margin-bottom:10px">Have an idea or want to work together?</h3><p>Feel free to contact me for web development opportunities, collaborations and projects.</p><div style="margin-top:20px;color:#b5bfd2;font-size:11px;line-height:2">✉ prajapatiritesh0853@gmail.com<br>◉ +91 6393760853<br>⌖ India</div></div>
+<div class="card"><form class="form" id="form"><div class="row"><input required placeholder="Your name"><input required type="email" placeholder="Your email"></div><input required placeholder="Subject"><textarea required placeholder="Write your message..."></textarea><button class="btn primary" type="submit">Send Message ↗</button></form></div></div></div></section>
+
+<footer>© <span id="year"></span> Ritesh Prajapati. All Rights Reserved. · Designed & Developed with ❤️</footer>
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(x=>obs.observe(x));
+document.querySelectorAll('.card').forEach(c=>{
+ c.addEventListener('mousemove',e=>{const r=c.getBoundingClientRect(),x=e.clientX-r.left-r.width/2,y=e.clientY-r.top-r.height/2;c.style.transform=`perspective(900px) rotateX(${-y/35}deg) rotateY(${x/35}deg) translateY(-4px)`});
+ c.addEventListener('mouseleave',()=>c.style.transform='');
+});
+document.getElementById('form').addEventListener('submit',e=>{e.preventDefault();alert('Message form validated successfully. Connect it to your backend/email service to receive submissions.');e.target.reset()});
+document.getElementById('resumeBtn').addEventListener('click',e=>{
+ e.preventDefault();const t=`RITESH PRAJAPATI\nWeb Developer | Full-Stack Developer\nIndia\n\nSkills: HTML, CSS, JavaScript, Bootstrap, Python, Django, C, MySQL, Git, GitHub\n\nProjects:\nSmart Build Hub\nOnline Book Store\nPremium Salon Management System\nOnline Job Portal`;
+ const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([t],{type:'text/plain'}));a.download='Ritesh_Prajapati_Resume.txt';a.click();
+});
+</script>
+</body>
+</html>
